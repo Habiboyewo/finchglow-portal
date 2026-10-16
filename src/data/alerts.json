@@ -1,0 +1,58 @@
+[
+  {
+    "id": "a1",
+    "severity": "critical",
+    "scope": "group",
+    "title": "Payment gateway failure",
+    "message": "Card payments are failing. Use the manual payment link for now.",
+    "time": "2026-10-16T09:42:00Z"
+  },
+  {
+    "id": "a2",
+    "severity": "critical",
+    "scope": "ota",
+    "title": "Booking platform outage",
+    "message": "New bookings can't be completed. Engineers are investigating.",
+    "time": "2026-10-16T08:58:00Z"
+  },
+  {
+    "id": "a3",
+    "severity": "warning",
+    "scope": "ota",
+    "title": "Fare search slow for some routes",
+    "message": "Results may take longer than usual to load.",
+    "time": "2026-10-16T08:15:00Z"
+  },
+  {
+    "id": "a4",
+    "severity": "warning",
+    "scope": "facilities",
+    "title": "Lift maintenance in Building B",
+    "message": "Use the stairs between 13:00 and 15:00.",
+    "time": "2026-10-16T07:30:00Z"
+  },
+  {
+    "id": "a5",
+    "severity": "info",
+    "scope": "group",
+    "title": "Q4 town hall moved to Friday",
+    "message": "Calendar invites have been updated.",
+    "time": "2026-10-15T16:00:00Z"
+  },
+  {
+    "id": "a6",
+    "severity": "info",
+    "scope": "academy",
+    "title": "New trainer cohort starts Monday",
+    "message": "Check your schedule in the learning platform.",
+    "time": "2026-10-15T11:20:00Z"
+  },
+  {
+    "id": "a7",
+    "severity": "warning",
+    "scope": "tmc",
+    "title": "Corporate booking limits changing",
+    "message": "New approval limits apply from Monday.",
+    "time": "2026-10-15T10:00:00Z"
+  }
+]

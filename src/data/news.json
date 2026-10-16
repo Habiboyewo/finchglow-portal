@@ -1,0 +1,26 @@
+[
+  { "id": "n1", "scope": "group", "title": "Third quarter results announced", "summary": "A short summary of how the group performed this quarter.", "time": "2026-10-14T09:00:00Z" },
+  { "id": "n2", "scope": "group", "title": "Annual staff survey opens Monday", "summary": "It takes ten minutes and your answers are anonymous.", "time": "2026-10-13T08:30:00Z" },
+  { "id": "n3", "scope": "group", "title": "New staff portal coming soon", "summary": "One sign-in for every tool across all six businesses.", "time": "2026-10-08T10:00:00Z" },
+
+  { "id": "n4", "scope": "ota", "title": "New hotel partners added", "summary": "Twelve new partners are now bookable. See the supplier portal.", "time": "2026-10-13T14:00:00Z" },
+  { "id": "n5", "scope": "ota", "title": "Weekend flash sale is live", "summary": "Discounted fares on selected European routes until Sunday.", "time": "2026-10-11T12:00:00Z" },
+  { "id": "n6", "scope": "ota", "title": "Customer support hours extended", "summary": "The chat team now covers until 10pm on weekdays.", "time": "2026-10-07T09:00:00Z" },
+
+  { "id": "n7", "scope": "academy", "title": "Autumn course catalogue is live", "summary": "Browse the new courses in the learning platform.", "time": "2026-10-13T10:00:00Z" },
+  { "id": "n8", "scope": "academy", "title": "Trainer certification dates announced", "summary": "Sessions run in November. Book a place through your manager.", "time": "2026-10-09T15:30:00Z" },
+
+  { "id": "n9", "scope": "b2b", "title": "Agent commission update", "summary": "New commission tiers apply from next month.", "time": "2026-10-09T11:00:00Z" },
+  { "id": "n10", "scope": "b2b", "title": "Agent training webinar this Thursday", "summary": "Learn how to use the new group booking feature.", "time": "2026-10-06T13:00:00Z" },
+
+  { "id": "n11", "scope": "tmc", "title": "Updated corporate travel policy", "summary": "Changes to booking rules for corporate clients.", "time": "2026-10-11T09:30:00Z" },
+  { "id": "n12", "scope": "tmc", "title": "New client onboarding checklist", "summary": "A shorter checklist for setting up corporate accounts.", "time": "2026-10-08T14:30:00Z" },
+  { "id": "n13", "scope": "tmc", "title": "Duty-of-care reports now monthly", "summary": "Reports are sent on the first working day of each month.", "time": "2026-10-05T10:00:00Z" },
+
+  { "id": "n14", "scope": "holidays", "title": "Winter packages open for booking", "summary": "Early-bird pricing runs until the end of the month.", "time": "2026-10-10T15:00:00Z" },
+  { "id": "n15", "scope": "holidays", "title": "New resort partner in the Canary Islands", "summary": "Family rooms are now available for December.", "time": "2026-10-07T11:30:00Z" },
+
+  { "id": "n16", "scope": "facilities", "title": "New request form for repairs", "summary": "Repairs can now be logged from any tablet.", "time": "2026-10-12T13:30:00Z" },
+  { "id": "n17", "scope": "facilities", "title": "Fire drill scheduled for Wednesday", "summary": "Drills will take place in each building at 11am.", "time": "2026-10-09T08:00:00Z" },
+  { "id": "n18", "scope": "facilities", "title": "Car park resurfacing next week", "summary": "Use the east car park from Monday to Thursday.", "time": "2026-10-06T16:00:00Z" }
+]

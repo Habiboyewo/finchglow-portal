@@ -1,0 +1,18 @@
+{
+  "contact-centre-agent": {
+    "label": "Contact-centre agent",
+    "pinned": ["crm", "booking"]
+  },
+  "travel-consultant": {
+    "label": "Travel consultant",
+    "pinned": ["booking", "supplier"]
+  },
+  "facilities-technician": {
+    "label": "Facilities technician",
+    "pinned": ["facilities-requests", "maintenance-rota"]
+  },
+  "academy-trainer": {
+    "label": "Academy trainer",
+    "pinned": ["learning", "course-scheduler"]
+  }
+}

@@ -1,0 +1,8 @@
+[
+  { "id": "academy", "name": "Academy", "accent": "#6B3FA0", "accentDark": "#B79AE0", "logo": "/logos/academy.svg" },
+  { "id": "ota", "name": "OTA", "accent": "#0B5FA5", "accentDark": "#7FB2F0", "logo": "/logos/ota.svg" },
+  { "id": "b2b", "name": "B2B platform", "accent": "#0F766E", "accentDark": "#5ED0C3", "logo": "/logos/b2b.svg" },
+  { "id": "tmc", "name": "TMC", "accent": "#B45309", "accentDark": "#F0B35A", "logo": "/logos/tmc.svg" },
+  { "id": "holidays", "name": "Holidays", "accent": "#C2185B", "accentDark": "#F28DB2", "logo": "/logos/holidays.svg" },
+  { "id": "facilities", "name": "Shared facilities", "accent": "#3F6212", "accentDark": "#A5D061", "logo": "/logos/facilities.svg" }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "u1",
+    "name": "Ola",
+    "company": "ota",
+    "role": "travel-consultant",
+    "apps": ["booking", "crm", "supplier", "fare-monitor", "learning", "hr"]
+  },
+  {
+    "id": "u2",
+    "name": "Dave",
+    "company": "facilities",
+    "role": "facilities-technician",
+    "apps": ["facilities-requests", "maintenance-rota", "learning", "hr"]
+  },
+  {
+    "id": "u3",
+    "name": "Mary",
+    "company": "academy",
+    "role": "academy-trainer",
+    "apps": ["learning", "course-scheduler", "facilities-requests", "hr"]
+  },
+  {
+    "id": "u4",
+    "name": "John Smith",
+    "company": "tmc",
+    "role": "contact-centre-agent",
+    "apps": ["booking", "crm", "travel-policy", "hr"]
+  }
+]

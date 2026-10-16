@@ -1,0 +1,14 @@
+[
+  { "id": "booking", "name": "Booking tool", "description": "Search and book fares", "url": "https://example.com/booking", "companies": ["ota", "b2b", "tmc", "holidays"] },
+  { "id": "crm", "name": "CRM", "description": "Customer records", "url": "https://example.com/crm", "companies": ["ota", "b2b", "tmc", "holidays"] },
+  { "id": "supplier", "name": "Supplier portal", "description": "Rates and contracts", "url": "https://example.com/supplier", "companies": ["ota", "b2b", "tmc", "holidays"] },
+  { "id": "learning", "name": "Learning platform", "description": "Courses and training", "url": "https://example.com/learning", "companies": ["academy", "ota", "b2b", "tmc", "holidays", "facilities"] },
+  { "id": "facilities-requests", "name": "Facilities requests", "description": "Report or track an issue", "url": "https://example.com/facilities", "companies": ["academy", "ota", "b2b", "tmc", "holidays", "facilities"] },
+  { "id": "hr", "name": "HR self-service", "description": "Leave and payslips", "url": "https://example.com/hr", "companies": ["academy", "ota", "b2b", "tmc", "holidays", "facilities"] },
+  { "id": "fare-monitor", "name": "Fare monitor", "description": "Track fare changes", "url": "https://example.com/fares", "companies": ["ota"] },
+  { "id": "course-scheduler", "name": "Course scheduler", "description": "Plan training sessions", "url": "https://example.com/courses", "companies": ["academy"] },
+  { "id": "agent-commission", "name": "Agent commissions", "description": "Tiers and payouts", "url": "https://example.com/commission", "companies": ["b2b"] },
+  { "id": "travel-policy", "name": "Travel policy checker", "description": "Corporate booking rules", "url": "https://example.com/policy", "companies": ["tmc"] },
+  { "id": "package-builder", "name": "Package builder", "description": "Create holiday packages", "url": "https://example.com/packages", "companies": ["holidays"] },
+  { "id": "maintenance-rota", "name": "Maintenance rota", "description": "Technician schedules", "url": "https://example.com/rota", "companies": ["facilities"] }
+]
