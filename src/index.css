@@ -34,3 +34,15 @@
   --color-critical-line: var(--critical-line);
   --color-critical-text: var(--critical-text);
 }
+
+:root {
+  --warning-bg: #fff4e0;
+  --warning-line: #b26a00;
+  --warning-text: #6b3b00;
+}
+
+@theme inline {
+  --color-warning-bg: var(--warning-bg);
+  --color-warning-line: var(--warning-line);
+  --color-warning-text: var(--warning-text);
+}
