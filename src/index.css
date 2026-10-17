@@ -22,3 +22,15 @@
   outline: 3px solid var(--accent);
   outline-offset: 2px;
 }
+
+:root {
+  --critical-bg: #fdecec;
+  --critical-line: #b42318;
+  --critical-text: #5e0f09;
+}
+
+@theme inline {
+  --color-critical-bg: var(--critical-bg);
+  --color-critical-line: var(--critical-line);
+  --color-critical-text: var(--critical-text);
+}

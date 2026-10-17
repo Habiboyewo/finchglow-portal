@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { CriticalBanner } from "../alerts/CriticalBanner";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { SkipLink } from "./SkipLink";
@@ -8,6 +9,7 @@ export function AppShell({ children }: { children: ReactNode }) {
     <div className="flex min-h-screen flex-col bg-bg text-fg">
       <SkipLink />
       <Header />
+      <CriticalBanner />
       <main
         id="main"
         tabIndex={-1}
