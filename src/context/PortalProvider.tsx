@@ -17,9 +17,11 @@ export function PortalProvider({ children }: { children: ReactNode }) {
   const company = companies.find((c) => c.id === companyId) ?? companies[0];
   const role = roles[user.role];
 
-  // Re-theme the whole portal by changing one CSS variable
+    // Re-theme the whole portal: the CSS picks the light or dark accent
   useEffect(() => {
-    document.documentElement.style.setProperty("--accent", company.accent);
+    const root = document.documentElement.style;
+    root.setProperty("--accent-light", company.accent);
+    root.setProperty("--accent-dark", company.accentDark);
   }, [company]);
 
   const value = useMemo<PortalValue>(

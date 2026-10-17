@@ -1,12 +1,37 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
+  color-scheme: light;
   --bg: #f4f7fb;
   --surface: #ffffff;
   --text: #14243a;
   --muted: #4a5b72;
   --border: #d5dee8;
-  --accent: #0b5fa5;
+  --accent: var(--accent-light, #0b5fa5);
+  --critical-bg: #fdecec;
+  --critical-line: #b42318;
+  --critical-text: #5e0f09;
+  --warning-bg: #fff4e0;
+  --warning-line: #b26a00;
+  --warning-text: #6b3b00;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #14181f;
+  --surface: #1c222c;
+  --text: #e8edf4;
+  --muted: #a9b4c4;
+  --border: #3a4352;
+  --accent: var(--accent-dark, #7fb2f0);
+  --critical-bg: #3a1512;
+  --critical-line: #ff8a80;
+  --critical-text: #ffdad6;
+  --warning-bg: #3a2a0a;
+  --warning-line: #e0a040;
+  --warning-text: #ffe2ae;
 }
 
 @theme inline {
@@ -16,33 +41,15 @@
   --color-muted: var(--muted);
   --color-line: var(--border);
   --color-accent: var(--accent);
+  --color-critical-bg: var(--critical-bg);
+  --color-critical-line: var(--critical-line);
+  --color-critical-text: var(--critical-text);
+  --color-warning-bg: var(--warning-bg);
+  --color-warning-line: var(--warning-line);
+  --color-warning-text: var(--warning-text);
 }
 
 :focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
-}
-
-:root {
-  --critical-bg: #fdecec;
-  --critical-line: #b42318;
-  --critical-text: #5e0f09;
-}
-
-@theme inline {
-  --color-critical-bg: var(--critical-bg);
-  --color-critical-line: var(--critical-line);
-  --color-critical-text: var(--critical-text);
-}
-
-:root {
-  --warning-bg: #fff4e0;
-  --warning-line: #b26a00;
-  --warning-text: #6b3b00;
-}
-
-@theme inline {
-  --color-warning-bg: var(--warning-bg);
-  --color-warning-line: var(--warning-line);
-  --color-warning-text: var(--warning-text);
 }
