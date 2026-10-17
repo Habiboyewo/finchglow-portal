@@ -1,13 +1,21 @@
+import { usePortal } from "../../context/portalContext";
 import { CompanySwitcher } from "./CompanySwitcher";
 import { DemoUserPicker } from "./DemoUserPicker";
 
 export function Header() {
+  const { company } = usePortal();
+
   return (
     <header className="border-b border-t-4 border-b-line border-t-accent bg-surface">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4 px-4 py-3 sm:px-8">
-        <p className="text-xl font-bold text-accent">
-          Finchglow <span className="font-medium text-fg">Group Portal</span>
-        </p>
+        <div className="flex items-center gap-3">
+          <img
+            src={company.logo}
+            alt={`Finchglow ${company.name}`}
+            className="h-8 w-auto"
+          />
+          <p className="text-xl font-medium text-fg">Group Portal</p>
+        </div>
         <div className="ml-auto flex flex-wrap items-center gap-3">
           <CompanySwitcher />
           <DemoUserPicker />
