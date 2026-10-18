@@ -35,6 +35,14 @@ Then open http://localhost:5173/.
 - **Responsive and accessible:** works from phone to desktop. See the accessibility section.
 - **Extras:** dark mode, and a role-based view (four roles with different Quick access shortcuts).
 
+## Extra I chose, and why
+
+**Dark mode.** Late-shift contact-centre and travel desk teams look at screens for long hours in dim rooms, and a bright white page is tiring. I had also built it before, so it was low risk, which left more time for accessibility and tests, which carry more of the marking. Each company has its own dark accent, and the colours are checked for contrast in both themes.
+
+I also built a role-based view: four roles with different "Quick access" shortcuts. It reuses the same config, so it cost little.
+
+I did not build offline support. The part that matters most for a critical alert, reaching someone with the app closed or no signal, needs push notifications and a backend. See "Reaching staff on poor signal" below, and decision 3 in [DECISIONS.md](./DECISIONS.md).
+
 ## How it is built
 
 Stack: Vite, React, TypeScript (strict mode), Tailwind CSS v4 and Vitest.
@@ -66,6 +74,8 @@ Choices and why:
 - **Business rules are plain functions** in `utils/filters.ts` and `utils/search.ts`. They have no React in them, so they are easy to test.
 - **One data hook, `useFetch`,** gives every screen the same loading, error and retry behaviour.
 - **One app shell** provides the skip link, header, critical banner, main area and footer, so no page repeats them.
+
+The three hardest trade-offs are in [DECISIONS.md](./DECISIONS.md).
 
 ## The rules
 
