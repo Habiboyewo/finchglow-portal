@@ -12,7 +12,18 @@ export function NewsCard({ item, scopeName }: NewsCardProps) {
       <p className="text-xs font-bold uppercase tracking-wide text-muted">
         News · {scopeName}
       </p>
-      <h4 className="font-bold">{item.title}</h4>
+      <h4 className="font-bold">
+        {/* Placeholder address: the prototype has no real news pages */}
+        <a
+          href={`https://example.com/news/${item.id}`}
+          target="_blank"
+          rel="noreferrer"
+          className="text-accent underline"
+        >
+          {item.title}
+          <span className="sr-only"> (opens in a new tab)</span>
+        </a>
+      </h4>
       <p className="text-sm text-muted">{item.summary}</p>
       <p className="mt-1 text-xs text-muted">{formatDate(item.time)}</p>
     </article>

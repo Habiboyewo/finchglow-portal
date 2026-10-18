@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { CriticalBanner } from "../alerts/CriticalBanner";
+import { CompanyAnnouncer } from "./CompanyAnnouncer";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { SkipLink } from "./SkipLink";
@@ -8,6 +9,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col bg-bg text-fg">
       <SkipLink />
+      <CompanyAnnouncer />
       <Header />
       <CriticalBanner />
       <main
