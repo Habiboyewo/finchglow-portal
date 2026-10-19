@@ -4,6 +4,10 @@ A front-end prototype of a single front door for staff across six businesses: Ac
 
 All data is mock data in local JSON files. There is no backend and no real sign-in.
 
+- **Live demo:** [paste your Vercel address]
+- **Code:** https://github.com/Habiboyewo/finchglow-portal
+- **See the error states:** add `?fail=1` to the live address to make every request fail, and use the Try again buttons. Remove it to go back to normal.
+
 ## Run it
 
 You need Node.js (a current LTS version; I used v24) and npm.
@@ -25,6 +29,8 @@ Then open http://localhost:5173/.
 | `npm run preview` | Serves the production build locally |
 
 `.env` has one setting, `VITE_FAILURE_RATE`. It is the chance (0 to 1) that the mock API fails a request. Use `0` for a smooth demo and `0.5` or `1` to see the error and retry states. Restart the dev server after changing it.
+
+**Showing errors without changing any setting:** add `?fail=1` to the address, for example `http://localhost:5173/?fail=1`. Every request then fails. `?fail=0.5` fails about half of them. The address setting wins over `.env`, and it works on the live site too. Remove the parameter to go back to normal.
 
 ## What it does
 
@@ -99,7 +105,9 @@ No component changes are needed. The contrast test reads `companies.json`, so th
 
 ## Mock data and API
 
-`mockApi.ts` wraps the JSON in a function that waits 700 ms and fails at the rate in `.env`. That lets the loading, error and retry states be shown honestly. Companies, users and roles are read directly as configuration. Apps, alerts and news go through the mock API, because in a real system they would come from a server.
+`mockApi.ts` wraps the JSON in a function that waits 700 ms and fails at the rate in `.env`, or at the rate in the `?fail=` address parameter when there is one. That lets the loading, error and retry states be shown honestly, including on the live site. The live site's default rate is 0, so a first visit always works. Companies, users and roles are read directly as configuration. Apps, alerts and news go through the mock API, because in a real system they would come from a server.
+
+The `?fail=` switch is a demo aid. A real API would not have it.
 
 ## Sign-in (described, not built)
 
@@ -127,7 +135,7 @@ For a critical alert, such as a payment failure, reaching phones with weak signa
 - Send push notifications to phones, with SMS as a fallback for staff with no data.
 - Poll with increasing delays, and show a clear offline state.
 
-The prototype does not do this. It needs backend work.
+The prototype does not do this. It needs backend work. Today, when alerts fail to load, the banner shows an error with a Try again button, and no critical alert is shown until a retry succeeds.
 
 ## Accessibility
 
@@ -226,6 +234,7 @@ I did not split the code by route, because the app is a single page. Almost all 
 ## Known limitations
 
 - The alert banner and the feed each fetch alerts, so there are two requests. A shared data layer would remove one.
+- When alerts fail to load, no critical alert is shown until a retry succeeds. Showing the last known alerts would fix this.
 - Search is a simple "contains" match, with no typo tolerance or ranking.
 - A brief flash of the light theme on first load for dark-mode users.
 - Footer and news links are placeholders.
