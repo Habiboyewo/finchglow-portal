@@ -5,14 +5,25 @@ import newsData from "../data/news.json";
 
 const DELAY_MS = 700;
 
-// Failure rate comes from .env (0 = never fails, 0.2 = about 1 in 5 requests)
+// Default failure rate comes from .env (0 = never fails, 0.2 = about 1 in 5)
 const parsedRate = Number(import.meta.env.VITE_FAILURE_RATE ?? 0.2);
-const FAILURE_RATE = Number.isNaN(parsedRate) ? 0 : parsedRate;
+const DEFAULT_RATE = Number.isNaN(parsedRate) ? 0 : parsedRate;
+
+// Demo switch: adding ?fail=1 to the address makes every request fail,
+// ?fail=0.5 makes about half fail. This lets the error and retry states be
+// shown on the live site without changing any setting.
+function getFailureRate(): number {
+  const param = new URLSearchParams(window.location.search).get("fail");
+  if (param === null) return DEFAULT_RATE;
+  if (param === "") return 1;
+  const value = Number(param);
+  return Number.isNaN(value) ? DEFAULT_RATE : Math.min(Math.max(value, 0), 1);
+}
 
 function simulateRequest<T>(data: T, label: string): Promise<T> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (Math.random() < FAILURE_RATE) {
+      if (Math.random() < getFailureRate()) {
         reject(new Error(`Could not load ${label}`));
       } else {
         resolve(data);
